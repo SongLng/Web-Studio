@@ -70,11 +70,27 @@ textarea {
   padding-bottom: 94px;
 }
 
+.section-work {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .logo__first {
@@ -621,7 +637,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(../images/icon/iconsend.svg);
+  background-image: url(/images/icon/iconsend.svg);
   content: "";
   width: 24px;
   height: 24px;
@@ -801,8 +817,8 @@ textarea {
   margin-right: auto;
   margin-left: auto;
   background-color: var(--footer-background-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero.jpg);
 }
 
 .hero__title {
@@ -850,25 +866,37 @@ textarea {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 480px) {
+  .features__list {
+    display: block;
+  }
+}
+
 .features__item:nth-child(1)::before {
-  background-image: url(../images/icon/antenna.svg);
+  background-image: url(/images/icon/antenna.svg);
 }
 
 .features__item:nth-child(2)::before {
-  background-image: url(../images/icon/clock.svg);
+  background-image: url(/images/icon/clock.svg);
 }
 
 .features__item:nth-child(3)::before {
-  background-image: url(../images/icon/diagram.svg);
+  background-image: url(/images/icon/diagram.svg);
 }
 
 .features__item:nth-child(4)::before {
-  background-image: url(../images/icon/astronaut.svg);
+  background-image: url(/images/icon/astronaut.svg);
 }
 
 .features__item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .features__item {
+    width: 450px;
+  }
 }
 
 .features__item::before {
@@ -881,6 +909,12 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 480px) {
+  .features__item::before {
+    width: 450px;
+  }
 }
 
 .features__item:nth-child(4n) {
@@ -897,11 +931,35 @@ textarea {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 480px) {
+  .features__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .features__description {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 480px) {
+  .section-work {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .work {
+    display: none;
+  }
 }
 
 .work__title {
@@ -955,6 +1013,32 @@ textarea {
   bottom: 0px;
 }
 
+.staff__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 480px) {
+  .staff__list {
+    width: 450px;
+    margin-bottom: 30px;
+  }
+}
+
+.staff__img {
+  width: 270px;
+}
+
+@media screen and (max-width: 480px) {
+  .staff__img {
+    width: 450px;
+  }
+}
+
 .staff__title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -963,15 +1047,6 @@ textarea {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
-}
-
-.staff__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  list-style-type: none;
 }
 
 .staff__item-title {
@@ -1000,6 +1075,12 @@ textarea {
   border-radius: 0px 0px 4px 4px;
 }
 
+@media screen and (max-width: 480px) {
+  .staff__item {
+    margin-bottom: 30px;
+  }
+}
+
 .staff__item:nth-child(4n) {
   margin-right: 0;
 }
@@ -1013,6 +1094,13 @@ textarea {
 
 .section.team {
   background-color: var(--secondary-background-color);
+}
+
+@media screen and (max-width: 480px) {
+  .section.team {
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
 }
 
 .clients__title {

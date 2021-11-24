@@ -18,7 +18,7 @@
 <body>
   <!-- Шапка сайта -->
 
-  <header>
+  <header class="header">
     <div class="container main-nav">
       <nav class="nav">
         <a href="./index.html" class="logo"><span class="logo__first">Web</span>Studio</a>
@@ -32,6 +32,56 @@
           <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
         </ul>
       </nav>
+
+      <!-- Mobile menu start -->
+
+      <button class="burger-btn" data-menu-open><svg class="burger-btn__icon">
+          <use href="./images/icon/symbol-defs.svg#icon-burger-btn"></use>
+        </svg>
+      </button>
+
+      <div class="mobile-menu" data-menu>
+        <button class="mobile-menu__btn" data-menu-close><svg class="mobile-menu__icon">
+            <use href="./images/icon/symbol-defs.svg#icon-close__mobile"></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="mobile-nav_list">
+            <li class="mobile-nav__item">
+              <a href="./index.html" class="mobile-nav__link--current">Студия</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+            </li>
+            <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-contacts">
+          <ul class="mobile-contacts__list">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__link phone">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__link mail">info@devstudio.com</a>
+            </li>
+
+          </ul>
+          <div class="mobile-social">
+            <ul class="mobile-social__list">
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">Instagram</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">Twitter</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">Facebook</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mobile menu end -->
+
       <div class="contacts">
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -167,15 +217,38 @@
           <h2 class="work__title">Чем мы занимаемся</h2>
           <ul class="work__list">
             <li class="work__item">
-              <img src="./images/box1.jpg" alt="Компьютер" width="370" />
+              <picture>
+                <source media="(min-width: 1200px )" srcset="./img/occupation/occ-1-desktop.jpg 1x,
+                   ./img/occupation/occ-1-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 1200px)" srcset="./img/occupation/occ-1-desktop.webp 1x, 
+                   ./img/occupation/occ-1-desktop@2x.webp 2x" type="image/webp">
+                <img src="#" alt="Компьютер" width="370" />
+              </picture>
+
               <p class="work__item-description">Десктопные Приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/box2.jpg" alt="Ноутбук" width="370" />
+              <picture>
+                <source media="(min-width: 1200px )" srcset="./img/occupation/occ-2-desktop.jpg 1x,
+                                 ./img/occupation/occ-2-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 1200px)" srcset="./img/occupation/occ-2-desktop.webp 1x, 
+                                 ./img/occupation/occ-2-desktop@2x.webp 2x" type="image/webp">
+                <img src="#" alt="Ноутбук" width="370" />
+              </picture>
               <p class="work__item-description">Мобильные Приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/box3.jpg" alt="Планшет" width="370" />
+              <picture>
+                <source media="(min-width: 1200px )" srcset="./img/occupation/occ-3-desktop.jpg 1x,
+                                               ./img/occupation/occ-3-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 1200px)" srcset="./img/occupation/occ-3-desktop.webp 1x, 
+                                               ./img/occupation/occ-3-desktop@2x.webp 2x" type="image/webp">
+                <img src="#" alt="Планшет" width="370" />
+              </picture>
+
               <p class="work__item-description">Дизайнерские Решения</p>
             </li>
           </ul>
@@ -302,7 +375,7 @@
 
     <!-- Clienta -->
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container company">
         <div class="clients">
           <h2 class="clients__title">Постоянные клиенты</h2>
@@ -348,11 +421,11 @@
 
       </div>
     </section>
-  </main>
+  </main> -->
 
-  <!-- Footer -->
+    <!-- Footer -->
 
-  <footer class="footer">
+    <!-- <footer class="footer">
     <div class="container footer">
       <div><a href="./index.html" class="footer__logo" lang="en"><span class="logo__first">Web</span><span
             class="logo__second">Studio</span></a>
@@ -416,8 +489,9 @@
 
 
     </div>
-  </footer>
-  <script src="./js/modal.js"></script>
+  </footer> -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,15 @@
-.section-work {
-  @media screen and(max-width: 480px) {
-    padding-bottom: 30px;
-    padding-top: 30px;
-  }
-}
+// .section-work {
+// @media screen and(max-width: 480px) {
+//   padding-bottom: 30px;
+//   padding-top: 30px;
+// }
+// }
 .work {
-  @media screen and(max-width: 480px) {
-    display: none;
+  display: none;
+  @media screen and(min-width: 1200px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
   }
 }
 
@@ -30,9 +33,9 @@
 .work__item {
   margin-right: 30px;
   position: relative;
-}
-.work__item:nth-child(3n) {
-  margin-right: 0;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .work__item-description {

@@ -6,6 +6,21 @@
   padding-bottom: 60px;
 }
 
+.bottom {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    display: flex;
+
+    align-items: baseline;
+  }
+}
+
 .footer {
   // display: flex;
   // flex-direction: column;

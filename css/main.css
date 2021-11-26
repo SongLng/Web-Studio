@@ -829,6 +829,12 @@ textarea {
   margin-top: 20px;
 }
 
+@media screen and (width: 1200px) {
+  .subscribe-btn {
+    margin-left: 12px;
+  }
+}
+
 .subscribe-btn::after {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -857,6 +863,12 @@ textarea {
   padding-left: 16px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (width: 1200px) {
+  .subscribe input {
+    width: 358px;
+  }
 }
 
 .subscribe input::-webkit-input-placeholder {
@@ -1675,6 +1687,31 @@ textarea {
   background-color: var(--footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bottom {
+    width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .footer {

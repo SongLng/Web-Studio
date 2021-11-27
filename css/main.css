@@ -80,7 +80,6 @@ textarea {
 }
 
 .container {
-  min-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -1794,7 +1793,6 @@ textarea {
 }
 
 .footer-main {
-  min-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1892,6 +1890,9 @@ textarea {
 @media screen and (min-width: 767px) and (max-width: 1199px) {
   .portfolio-list {
     width: 768px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1984,12 +1985,6 @@ textarea {
   border-left: 0.5px solid var(--border-color);
   border-bottom: 0.5px solid var(--border-color);
   padding: 20px 24px 20px 24px;
-}
-
-@media screen and (min-width: 767px) and (max-width: 1199px) {
-  .border {
-    width: 354px;
-  }
 }
 
 @media screen and (min-width: 1200px) {

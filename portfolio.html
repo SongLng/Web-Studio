@@ -11,12 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css " />
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
   <link rel="stylesheet" href="./dist/css/main.min.css" />
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container main-nav">
       <nav class="nav">
         <a href="./index.html" class="logo"><span class="logo__first">Web</span>Studio</a>
@@ -30,6 +30,58 @@
           <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
         </ul>
       </nav>
+
+      <!-- Mobile menu start -->
+
+      <button class="burger-btn" data-menu-open><svg class="burger-btn__icon">
+          <use href="./images/icon/symbol-defs.svg#icon-burger-btn"></use>
+        </svg>
+      </button>
+
+      <div class="mobile-menu" data-menu>
+        <button class="mobile-menu__btn" data-menu-close><svg class="mobile-menu__icon">
+            <use href="./images/icon/symbol-defs.svg#icon-close__mobile"></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="mobile-nav_list">
+            <li class="mobile-nav__item">
+              <a href="./index.html" class="mobile-nav__link">Студия</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="./portfolio.html" class="mobile-nav__link--current">Портфолио</a>
+            </li>
+            <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-contacts">
+          <ul class="mobile-contacts__list">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__link phone">+38
+                096 111 11 11</a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__link
+                  mail">info@devstudio.com</a>
+            </li>
+
+          </ul>
+          <div class="mobile-social">
+            <ul class="mobile-social__list">
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">Instagram</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">Twitter</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">Facebook</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mobile menu end -->
+
       <div class="contacts">
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -53,21 +105,21 @@
     <section class="section">
       <div class="container">
         <h1 hidden>Портфолио</h1>
-        <ul class="filter">
-          <li class="item">
-            <button type="button" class="filter-button current">Все</button>
+        <ul class="filter__list">
+          <li class="filter__item">
+            <button type="button" class="filter__button current">Все</button>
           </li>
-          <li class="item">
-            <button type="button" class="filter-button">Веб-Сайты</button>
+          <li class="filter__item">
+            <button type="button" class="filter__button">Веб-Сайты</button>
           </li>
-          <li class="item">
-            <button type="button" class="filter-button">Приложения</button>
+          <li class="filter__item">
+            <button type="button" class="filter__button">Приложения</button>
           </li>
-          <li class="item">
-            <button type="button" class="filter-button">Дизайн</button>
+          <li class="filter__item">
+            <button type="button" class="filter__button">Дизайн</button>
           </li>
-          <li class="item">
-            <button type="button" class="filter-button">Маркетинг</button>
+          <li class="filter__item">
+            <button type="button" class="filter__button">Маркетинг</button>
           </li>
         </ul>
 
@@ -76,7 +128,28 @@
         <ul class="portfolio-list">
 
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img.jpg" alt="ноутбук" width="370" height="294" />
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-1.webp 1x,
+                    ./img/works/works-1@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-1.jpg 1x,
+                    ./img/works/works-1@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-1-tablet.webp
+                    1x,
+                    ./img/works/works-1-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-1-tablet.jpg 1x,
+                    ./img/works/works-1-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-1-desktop.webp,
+                    ./img/works/works-1-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-1-desktop.jpg
+                    1x,
+                    ./img/works/works-1-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Технокряк" />
+              </picture>
+
               <p class="portfolio-card-description">Технокряк это
                 современная площадка распространения коронавируса.
                 Компании используют эту платформу для цифрового
@@ -92,9 +165,31 @@
           </li>
 
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img2.jpg" alt="Баскетбол" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                porro voluptate ad temporibus labore iure impedit, voluptatibus iste veritatis dolore sequi nisi vitae
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-2.webp 1x,
+                    ./img/works/works-2@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-2.jpg 1x,
+                    ./img/works/works-2@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-2-tablet.webp
+                    1x,
+                    ./img/works/works-2-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-2-tablet.jpg 1x,
+                    ./img/works/works-2-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-2-desktop.webp,
+                    ./img/works/works-2-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-2-desktop.jpg
+                    1x,
+                    ./img/works/works-2-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Баскетбол" />
+              </picture>
+              <p class="portfolio-card-description">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Numquam
+                porro voluptate ad temporibus labore iure impedit,
+                voluptatibus iste veritatis dolore sequi nisi vitae
                 minus nobis aut! Saepe, id. Fugit, consequatur.</p>
             </div>
 
@@ -106,9 +201,32 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img3.jpg" alt="Рыба" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem,
-                excepturi placeat accusamus quo libero eaque odio aperiam sapiente possimus beatae optio ipsum nisi
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-3.webp 1x,
+                    ./img/works/works-3@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-3.jpg 1x,
+                    ./img/works/works-3@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-3-tablet.webp
+                    1x,
+                    ./img/works/works-3-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-3-tablet.jpg 1x,
+                    ./img/works/works-3-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-3-desktop.webp,
+                    ./img/works/works-3-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-3-desktop.jpg
+                    1x,
+                    ./img/works/works-3-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Рыба" />
+              </picture>
+
+              <p class="portfolio-card-description">Lorem ipsum dolor, sit
+                amet consectetur adipisicing elit. Dolorem,
+                excepturi placeat accusamus quo libero eaque odio aperiam
+                sapiente possimus beatae optio ipsum nisi
                 quibusdam culpa neque? Provident explicabo excepturi repellat!</p>
             </div>
 
@@ -118,10 +236,33 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img4.jpg" alt="Наушники" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil neque
-                laborum molestias repellat voluptatibus recusandae pariatur necessitatibus quos iusto, dignissimos quod
-                dolore provident sint consequuntur minima fuga veniam ratione. Illo.</p>
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-4.webp 1x,
+                    ./img/works/works-4@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-4.jpg 1x,
+                    ./img/works/works-4@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-4-tablet.webp
+                    1x,
+                    ./img/works/works-4-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-4-tablet.jpg 1x,
+                    ./img/works/works-4-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-4-desktop.webp,
+                    ./img/works/works-4-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-4-desktop.jpg
+                    1x,
+                    ./img/works/works-4-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Наушники" />
+              </picture>
+              <p class="portfolio-card-description">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Nihil neque
+                laborum molestias repellat voluptatibus recusandae pariatur
+                necessitatibus quos iusto, dignissimos quod
+                dolore provident sint consequuntur minima fuga veniam ratione.
+                Illo.</p>
             </div>
 
             <div class="border">
@@ -130,9 +271,31 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img5.jpg" alt="Коробка" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis reprehenderit ratione similique ea quae. At, ipsa. Maiores, hic velit quisquam provident
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-5.webp 1x,
+                    ./img/works/works-5@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-5.jpg 1x,
+                    ./img/works/works-5@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-5-tablet.webp
+                    1x,
+                    ./img/works/works-5-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-5-tablet.jpg 1x,
+                    ./img/works/works-5-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-5-desktop.webp,
+                    ./img/works/works-5-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-5-desktop.jpg
+                    1x,
+                    ./img/works/works-5-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Коробка" />
+              </picture>
+              <p class="portfolio-card-description">Lorem, ipsum dolor sit
+                amet consectetur adipisicing elit.
+                Perferendis reprehenderit ratione similique ea quae. At, ipsa.
+                Maiores, hic velit quisquam provident
                 nihil rerum ab excepturi debitis, omnis impedit, eos ad!</p>
             </div>
 
@@ -142,10 +305,33 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img6.jpg" alt="Аймак" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-                laborum soluta ipsam totam recusandae ea doloremque, dicta necessitatibus cupiditate fugit, praesentium
-                delectus? Temporibus totam, libero esse fuga quasi quibusdam aliquid?</p>
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-6.webp 1x,
+                    ./img/works/works-6@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-6.jpg 1x,
+                    ./img/works/works-6@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-6-tablet.webp
+                    1x,
+                    ./img/works/works-6-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-6-tablet.jpg 1x,
+                    ./img/works/works-6-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-6-desktop.webp,
+                    ./img/works/works-6-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-6-desktop.jpg
+                    1x,
+                    ./img/works/works-6-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Аймак" />
+              </picture>
+              <p class="portfolio-card-description">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Pariatur
+                laborum soluta ipsam totam recusandae ea doloremque, dicta
+                necessitatibus cupiditate fugit, praesentium
+                delectus? Temporibus totam, libero esse fuga quasi quibusdam
+                aliquid?</p>
             </div>
 
             <div class="border">
@@ -156,9 +342,31 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img7.jpg" alt="Журнал" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam esse
-                itaque commodi, aspernatur quo veritatis sequi, saepe impedit perferendis qui nesciunt neque quidem!
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-7.webp 1x,
+                                    ./img/works/works-7@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-7.jpg 1x,
+                                    ./img/works/works-7@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-7-tablet.webp
+                                    1x,
+                                    ./img/works/works-7-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-7-tablet.jpg 1x,
+                                    ./img/works/works-7-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-7-desktop.webp,
+                                    ./img/works/works-7-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-7-desktop.jpg
+                                    1x,
+                                    ./img/works/works-7-desktop@2x.jpg 2x" />
+
+                <img src="" alt="Журнал" />
+              </picture>
+              <p class="portfolio-card-description">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Ullam esse
+                itaque commodi, aspernatur quo veritatis sequi, saepe impedit
+                perferendis qui nesciunt neque quidem!
                 Cumque, expedita perspiciatis nulla eaque vero tempore!</p>
             </div>
 
@@ -170,9 +378,32 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img8.jpg" alt="Бирка" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                eligendi voluptas facilis possimus voluptatibus saepe doloremque laudantium quo officia excepturi, fuga
+            <div class="item-wrap">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-8.webp 1x,
+                                                    ./img/works/works-8@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-8.jpg 1x,
+                                                    ./img/works/works-8@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-8-tablet.webp
+                                                    1x,
+                                                    ./img/works/works-8-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-8-tablet.jpg 1x,
+                                                    ./img/works/works-8-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-8-desktop.webp,
+                                                    ./img/works/works-8-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-8-desktop.jpg
+                                                    1x,
+                                                    ./img/works/works-8-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Бирка" />
+              </picture>
+
+              <p class="portfolio-card-description">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Cupiditate
+                eligendi voluptas facilis possimus voluptatibus saepe
+                doloremque laudantium quo officia excepturi, fuga
                 error fugiat porro ipsa quasi repellat vero, beatae ab!</p>
             </div>
 
@@ -182,9 +413,34 @@
             </div>
           </li>
           <li class="item">
-            <div class="item-wrap"><img src="./images/portfolio/img9.jpg" alt="Клавиатура" width="370" height="294" />
-              <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                facilis fuga modi. Rem reiciendis soluta vitae nulla quo sequi quis, repudiandae obcaecati dolore eius
+            <div class="item-wrap">
+
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/works/works-9.webp 1x,
+                                                                  ./img/works/works-9@2x.webp. 2x" type="image/webp" />
+                <source media="(max-width: 767px)" srcset="./img/works/works-9.jpg 1x,
+                                                                  ./img/works/works-9@2x.jpg 2x" />
+
+                <source media="(max-width: 1199px)" srcset="./img/works/works-9-tablet.webp
+                                                                  1x,
+                                                                  ./img/works/works-9-tablet@2x.webp 2x"
+                  type="image/webp" />
+                <source media="(max-width: 1199px)" srcset="./img/works/works-9-tablet.jpg 1x,
+                                                                  ./img/works/works-9-tablet@2x.jpg 2x" />
+
+                <source media="(min-width: 1200px)" srcset="./img/works/works-9-desktop.webp,
+                                                                  ./img/works/works-9-desktop@2x.webp 2x"
+                  type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./img/works/works-9-desktop.jpg
+                                                                  1x,
+                                                                  ./img/works/works-9-desktop@2x.jpg 2x" />
+
+                <img src="#" alt="Клавиатура" />
+              </picture>
+              <p class="portfolio-card-description">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Ipsam
+                facilis fuga modi. Rem reiciendis soluta vitae nulla quo sequi
+                quis, repudiandae obcaecati dolore eius
                 nesciunt ad deleniti, odio veritatis iure?</p>
             </div>
 
@@ -202,10 +458,10 @@
 
   <!-- Footer -->
 
-  <footer class="footer">
-    <div class="container footer">
-      <div><a href="./index.html" class="footer__logo" lang="en"><span class="logo__first">Web</span><span
-            class="logo__second">Studio</span></a>
+  <footer class="footer-main">
+    <div class="container bottom">
+      <div class="footer"><a href="./index.html" class="footer__logo" lang="en"><span
+            class="logo__first">Web</span><span class="logo__second">Studio</span></a>
         <address class="footer__address">
           <p class="footer__address-name">г. Киев, пр-т Леси Украинки, 26</p>
           <ul class="footer__list">
@@ -213,38 +469,39 @@
               <a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a>
             </li>
             <li class="footer__item">
-              <a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a>
+              <a href="tel:+380961111111" class="footer__link">+38 096 111 11
+                11</a>
             </li>
           </ul>
         </address>
       </div>
-      <div>
-        <h3 class="social-title">Присоединяйтесь</h3>
-        <ul class="social-menu">
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <svg class="social-logo" width="20px" height="20px">
+      <div class="conection">
+        <h3 class="conection__title">Присоединяйтесь</h3>
+        <ul class="conection__menu">
+          <li class="conection__item">
+            <a href="#" class="conection__link">
+              <svg class="conection__logo" width="20px" height="20px">
                 <use href="./images/icon/symbol-defs.svg#icon-instagram-footer"></use>
               </svg>
             </a>
           </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <svg class="social-logo" width="20px" height="20px">
+          <li class="conection__item">
+            <a href="#" class="conection__link">
+              <svg class="conection__logo" width="20px" height="20px">
                 <use href="./images/icon/symbol-defs.svg#icon-twitter-footer"></use>
               </svg>
             </a>
           </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <svg class="social-logo" width="20px" height="20px">
+          <li class="conection__item">
+            <a href="#" class="conection__link">
+              <svg class="conection__logo" width="20px" height="20px">
                 <use href="./images/icon/symbol-defs.svg#icon-facebook-footer"></use>
               </svg>
             </a>
           </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <svg class="social-logo" width="20px" height="20px">
+          <li class="conection__item">
+            <a href="#" class="conection__link">
+              <svg class="conection__logo" width="20px" height="20px">
                 <use href="./images/icon/symbol-defs.svg#icon-linkedin-footer"></use>
               </svg>
             </a>
@@ -252,7 +509,7 @@
         </ul>
       </div>
       <div class="subscribe">
-        <form action="subscribe">
+        <form class="subscribe__form" action="subscribe">
           <h3 class="subscribe-title">Подпишитесь на рассылку</h3>
           <label for="mail" hidden>E-mail</label>
           <div class="subscribe-block">
@@ -265,9 +522,9 @@
 
 
 
-
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

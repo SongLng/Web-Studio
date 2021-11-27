@@ -838,6 +838,7 @@ textarea {
 
 .subscribe-block {
   display: block;
+  min-width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -925,10 +926,16 @@ textarea {
   border-radius: 4px;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 450px;
+  width: 100%;
   padding-left: 16px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1281,7 +1288,6 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--footer-background-color);
-  max-width: 480px;
   height: 400px;
 }
 
@@ -1805,6 +1811,10 @@ textarea {
   padding-bottom: 60px;
 }
 
+.bottom {
+  width: 480px;
+}
+
 @media screen and (min-width: 768px) {
   .bottom {
     display: -webkit-box;
@@ -1831,10 +1841,6 @@ textarea {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-}
-
-.footer {
-  min-width: 450px;
 }
 
 @media screen and (min-width: 768px) {

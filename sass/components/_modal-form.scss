@@ -136,12 +136,12 @@
   height: 18px;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-image: url(/images/icon/Vector.svg);
+  background-image: url(../../images/icon/Vector.svg);
   margin-right: 8px;
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url(/images/icon/icon-check.svg);
+  background-image: url(../../images/icon/icon-check.svg);
 }
 
 .license {

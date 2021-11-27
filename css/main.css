@@ -606,12 +606,12 @@ textarea {
   height: 18px;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-image: url(/images/icon/Vector.svg);
+  background-image: url(../../images/icon/Vector.svg);
   margin-right: 8px;
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url(/images/icon/icon-check.svg);
+  background-image: url(../../images/icon/icon-check.svg);
 }
 
 .license {
@@ -912,7 +912,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(/images/icon/iconsend.svg);
+  background-image: url(../../images/icon/iconsend.svg);
   content: "";
   width: 24px;
   height: 24px;
@@ -1421,7 +1421,7 @@ textarea {
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) and (max-width: 1199px) {
   .features__item {
     max-width: 354px;
   }
@@ -1429,7 +1429,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .features__item {
-    width: 270px;
+    max-width: 270px;
     margin-right: 15px;
     margin-left: 15px;
   }

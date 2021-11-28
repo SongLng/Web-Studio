@@ -1,12 +1,16 @@
 .clients__title {
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 15px;
-  // margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 35px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .clients__logo {
@@ -63,8 +67,15 @@
 
 .clients__item {
   margin-bottom: 15px;
+  &:nth-child(6) {
+    margin-bottom: 0px;
+  }
   @media screen and (min-width: 480px) {
     margin: 15px 15px 15px 15px;
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-bottom: 0px;
+    }
     &:nth-child(odd) {
       margin-left: 0px;
     }
@@ -86,9 +97,15 @@
     &:nth-child(5) {
       margin: 15px 15px 15px 15px;
     }
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-bottom: 0px;
+    }
   }
 
   @media screen and (min-width: 1200px) {
+    margin: 15px 15px 0px 15px;
     &:nth-child(3),
     &:nth-child(4) {
       margin: 15px 15px 15px 15px;

@@ -1005,7 +1005,6 @@ textarea {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 30px;
-    margin-top: -15px;
   }
 }
 
@@ -1019,13 +1018,12 @@ textarea {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 50px;
-    margin-top: -15px;
   }
 }
 
 .filter__item {
   margin-right: 8px;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .filter__:last-child {

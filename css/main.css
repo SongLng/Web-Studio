@@ -340,7 +340,7 @@ textarea {
   fill: var(--accent);
 }
 
-.mobile-nav_list {
+.mobile-nav__list {
   font-weight: 500;
   font-size: 44px;
   line-height: 1.12;
@@ -1355,28 +1355,6 @@ textarea {
     font-size: 44px;
     line-height: 1.36;
   }
-}
-
-.hero__button {
-  color: var(--primary-background-color);
-  background: var(--accent);
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  display: inline-block;
-  min-width: 200px;
-  min-height: 50px;
-  border: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  padding: 10px 32px 10px 32px;
-  -webkit-box-shadow: var(--btn-shadow);
-          box-shadow: var(--btn-shadow);
-  border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {

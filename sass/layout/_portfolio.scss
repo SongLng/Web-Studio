@@ -20,20 +20,17 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 30px;
-
   width: 450px;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
-    // display: grid;
     max-width: 354px;
   }
 
   @media screen and (min-width: 1200px) {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
-
     max-width: 370px;
   }
 }
@@ -104,7 +101,7 @@
   border-right: 0.5px solid var(--border-color);
   border-left: 0.5px solid var(--border-color);
   border-bottom: 0.5px solid var(--border-color);
-  padding: 20px 24px 20px 24px;
+  padding: 20px 13px 20px 24px;
 
   @media screen and (min-width: 1200px) {
     width: 370px;

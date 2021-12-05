@@ -1023,11 +1023,20 @@ textarea {
 
 .filter__item {
   margin-right: 8px;
-  margin-top: 0px;
 }
 
-.filter__:last-child {
+.filter__item:last-child {
   margin-right: 0px;
+}
+
+.filter__item:nth-child(4), .filter__item:nth-child(5) {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__item:nth-child(4), .filter__item:nth-child(5) {
+    margin-top: 0;
+  }
 }
 
 .filter__button {
@@ -2027,7 +2036,7 @@ textarea {
   border-right: 0.5px solid var(--border-color);
   border-left: 0.5px solid var(--border-color);
   border-bottom: 0.5px solid var(--border-color);
-  padding: 20px 24px 20px 24px;
+  padding: 20px 13px 20px 24px;
 }
 
 @media screen and (min-width: 1200px) {
